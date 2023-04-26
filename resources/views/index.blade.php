@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <h1>HOLAAAAAAAA SOY ALVARO</h1>
     <div class="container-fluid">
         <img src="{{asset('images/inicio-img.jpg')}}" alt="" class="inicio-img">
 
