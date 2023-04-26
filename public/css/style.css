@@ -1,0 +1,45 @@
+
+body {
+    margin: 0px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+/*BOOSTRAP*/
+.row {
+    margin-right: 0px;
+}
+
+/*NAVBAR*/
+
+.nav-flex {
+    display: flex;
+    justify-content:space-between;
+    padding: 0px, 20px;
+    background-color: #5689C0;
+}
+
+
+.nav-flex li {
+    font-weight: bold;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.nav-flex ul li a {
+    color: white;
+}
+.nav-flex li span {
+    color: white;
+}
+
+/*Imagen inicio*/
+.inicio-img {
+    position: absolute;
+    width: 100%;
+    filter: brightness(0.8);
+}
+
+.logo-inicio{
+    width: 100px;
+}
