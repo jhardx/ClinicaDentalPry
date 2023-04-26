@@ -54,7 +54,7 @@
                             <a class="nav-link" href="#scrollspyHeading2">SERVICIOS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#scrollspyHeading3">NOSOTROS</a>
+                            <a class="nav-link" href="#scrollspyHeading3">NOSOTROS SOMOS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#scrollspyHeading4">CONTACTANO</a>
