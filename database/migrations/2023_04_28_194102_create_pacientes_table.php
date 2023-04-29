@@ -14,7 +14,7 @@ class CreatePacientesTable extends Migration
     public function up()
     {
         Schema::create('pacientes', function (Blueprint $table) {
-            $table->id('id_paciente');
+            $table->id('id');
             $table->char('dni', 15);
             $table->string('nombre', 100);
             $table->string('apellido_paterno', 50);
@@ -26,7 +26,7 @@ class CreatePacientesTable extends Migration
             $table->date('fecha_naci');
             $table->char('estado_civil', 20);
             $table->timestamp('fecha_registro')->nullable();
-            $table->foreignId('id_usuario');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

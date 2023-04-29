@@ -14,14 +14,14 @@ class CreateConsultasTable extends Migration
     public function up()
     {
         Schema::create('consultas', function (Blueprint $table) {
-            $table->id('id_consulta');
+            $table->id('id');
             $table->timestamp('fecha');
             $table->time('hora', $precision = 0);
             $table->char('duracion', 10);
             $table->float('precio', 8, 2);
-            $table->foreignId('id_odontologo');
-            $table->foreignId('id_paciente');
-            $table->foreignId('id_comprobante');
+            $table->foreignId('id_odontologo')->constrained('odontologos');
+            $table->foreignId('id_paciente')->constrained('pacientes');
+            $table->foreignId('id_comprobante')->constrained('comprobantes');
             $table->timestamps();
         });
     }

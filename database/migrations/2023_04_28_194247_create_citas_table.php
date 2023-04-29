@@ -14,12 +14,12 @@ class CreateCitasTable extends Migration
     public function up()
     {
         Schema::create('citas', function (Blueprint $table) {
-            $table->id('id_cita');
+            $table->id('id');
             $table->timestamp('fecha');
             $table->time('hora', $precision = 0);
             $table->string('estado_cita', 10);
-            $table->string('tratamiento', 100); 
-            $table->foreignId('id_paciente');
+            $table->string('tratamiento', 100);
+            $table->foreignId('paciente_id')->constrained('pacientes');
             $table->timestamps();
         });
     }

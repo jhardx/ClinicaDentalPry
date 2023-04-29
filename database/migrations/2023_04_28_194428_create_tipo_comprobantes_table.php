@@ -14,7 +14,7 @@ class CreateTipoComprobantesTable extends Migration
     public function up()
     {
         Schema::create('tipo_comprobantes', function (Blueprint $table) {
-            $table->id('id_tipo_comprobante');
+            $table->id('id');
             $table->string('tipo_comprobante', 100);
             $table->timestamps();
         });

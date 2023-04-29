@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHistorialTratamientosTable extends Migration
+class CreateComprobantesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateHistorialTratamientosTable extends Migration
      */
     public function up()
     {
-        Schema::create('historial_tratamientos', function (Blueprint $table) {
-            $table->id('id_historial_tra');
-            $table->foreignId('id_tratamiento');
-            $table->foreignId('id_historial_medicos');
-            $table->foreignId('id_comprobante');
+        Schema::create('comprobantes', function (Blueprint $table) {
+            $table->id('id');
+            $table->date('fecha');
+            $table->float('total', 8, 2);
+            $table->foreignId('id_tipo_comprobante')->constrained('tipo_comprobantes');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateHistorialTratamientosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('historial_tratamientos');
+        Schema::dropIfExists('comprobantes');
     }
 }
