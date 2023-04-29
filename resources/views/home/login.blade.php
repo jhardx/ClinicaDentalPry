@@ -1,5 +1,5 @@
 <html lang="es">
-<link rel="stylesheet" type="text/css" href="../../css/login.css">
+<link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}">
 <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar Sesion</label>
