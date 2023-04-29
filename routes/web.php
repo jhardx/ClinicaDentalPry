@@ -10,7 +10,7 @@ use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\HistorialMedicoController;
 // use App\Http\Controllers\HistorialTratamientoController;
 // use App\Http\Controllers\OdontologoController;
-// use App\Http\Controllers\PacienteController;
+use App\Http\Controllers\PacienteController;
 // use App\Http\Controllers\ProductoController;
 // use App\Http\Controllers\ProveedorController;
 // use App\Http\Controllers\TipoComprobanteController;
@@ -30,3 +30,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('web.index');
+
+Route::get('paciente/',[PacienteController::class, 'index']);
