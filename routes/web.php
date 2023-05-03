@@ -31,4 +31,3 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('web.index');
 
-Route::get('paciente/',[PacienteController::class, 'index']);

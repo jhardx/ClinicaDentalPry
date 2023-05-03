@@ -14,7 +14,7 @@ class OdontologoController extends Controller
      */
     public function index()
     {
-        //
+        return view('odontologo.index');
     }
 
     /**

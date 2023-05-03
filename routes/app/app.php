@@ -26,7 +26,7 @@ Route::resource('app/administradores', AdminController::class)->names('administr
 Route::resource('app/auth', AuthController::class)->names('auth');
 
 // Rutas de verificación de dos factores
-Route::resource('app/2fa', TwoFactorController::class)->names('2fa');
+// Route::resource('app/2fa', TwoFactorController::class)->names('2fa');
 
 // Rutas de citas
 Route::resource('app/citas', CitaController::class)->names('citas');
