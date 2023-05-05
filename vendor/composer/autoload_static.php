@@ -520,6 +520,7 @@ class ComposerStaticInit278de86b2c56409ec38177fb81076fde
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HistorialMedicoController' => __DIR__ . '/../..' . '/app/Http/Controllers/HistorialMedicoController.php',
         'App\\Http\\Controllers\\HistorialTratamientoController' => __DIR__ . '/../..' . '/app/Http/Controllers/HistorialTratamientoController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\OdontologoController' => __DIR__ . '/../..' . '/app/Http/Controllers/OdontologoController.php',
         'App\\Http\\Controllers\\PacienteController' => __DIR__ . '/../..' . '/app/Http/Controllers/PacienteController.php',
         'App\\Http\\Controllers\\ProductoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductoController.php',
