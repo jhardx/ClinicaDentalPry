@@ -17,7 +17,6 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HistorialMedicoController' => $baseDir . '/app/Http/Controllers/HistorialMedicoController.php',
     'App\\Http\\Controllers\\HistorialTratamientoController' => $baseDir . '/app/Http/Controllers/HistorialTratamientoController.php',
-    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\OdontologoController' => $baseDir . '/app/Http/Controllers/OdontologoController.php',
     'App\\Http\\Controllers\\PacienteController' => $baseDir . '/app/Http/Controllers/PacienteController.php',
     'App\\Http\\Controllers\\ProductoController' => $baseDir . '/app/Http/Controllers/ProductoController.php',
