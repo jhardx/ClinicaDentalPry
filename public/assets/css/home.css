@@ -50,15 +50,13 @@ header .navbar {
 
 .logo {
     display: inline-block;
-    max-width: 120px;
+    max-width: 100px;
     width: 100%;
     padding: 12px;
 }
 
 .logo img {
     width: 100%;
-    border-radius: 20px;
-
 }
 
 .navbar {

@@ -1,7 +1,7 @@
 <header>
     <div class="nav-bar info">
         <a href="#" class="logo">
-            <img src="{{url('img/logo.jpg')}}" alt="logo">
+            <img src="./img/logo.png" alt="logo">
         </a>
 
         <div class="navigation__info">

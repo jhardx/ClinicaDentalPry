@@ -29,9 +29,6 @@
         height: calc(5rem + 6rem);
         gap: 15px;
     }
-    header.sticky .navbar i{
-        color: var(--color-secundario);
-    }
 
     .navigation__info .nav-items .info-link {
         font-size: .9rem;
@@ -42,6 +39,20 @@
         width: 40px;
         height: 40px;
     }
+
+    /* FOOTER */
+    footer{
+        padding: 40px;
+    }
+    footer .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .copyrightText{
+        padding: 20px 40px 30px;
+    }
 }
 
 /* ========= Media queries (max-width: 768px) ========= */
@@ -51,7 +62,7 @@
     }
 
     header .nav-bar {
-        padding: 15px 20px;
+        padding: 25px 20px;
         justify-content: flex-end;
     }
 
@@ -184,6 +195,15 @@
     .swiper-navBtn {
         display: none;
     }
+
+    /* FOOTER */
+    footer .container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+    footer .container .sec h2::before{
+        content: unset;
+    }
 }
 
 @media (max-width: 600px) {
@@ -227,27 +247,132 @@
     .navigation .nav-items a {
         margin: 15px 40px;
     }
+
 }
 
-/* ========= Media queries (min-width: 1200px) ========= */
-@media (min-width: 1200px){
-    .about h1{
+/* ========= Media queries (min-width: 600px) ========= */
+@media (min-width: 600px) {
+    /* LO QUE OFRECEMOS */
+    .titulo {
+        margin-bottom: 50px;
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+    .grid {
+        gap: 2.2rem;
+    }
+
+    .grid-item h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ========= Media queries (min-width: 768px) ========= */
+@media (min-width: 768px){
+    .contact-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .contact-content .box-info{
+        width: 50%;
+    }
+    .form .button{
+        width: 160px;
+    }
+    .form .button input{
+        width: 100%;
+    }
+}
+
+/* ========= Media queries (min-width: 1024px) ========= */
+@media (min-width: 1024px) {
+    .titulo{
         font-size: 2.5rem;
         margin-bottom: 2.5rem;
     }
-    .about .about-box{
+    .subtitulo{
+        width: 50%;
+        margin: 0 auto 2rem;
+    }
+    .grid-item .boton{
+        min-width: 220px;
+        max-width: 250px;
+        transition: background-color .3s ease;
+    }
+
+    .grid-item .boton:hover{
+        background-color: #3D3D3D;
+    }
+    
+    .grid-item .boton i,
+    .grid-item .boton span{
+        transition: transform .3s;
+    }
+
+    .grid-item .boton i{
+        order: 0;
+        font-size: 1.5rem;
+        transform: scale(0);
+    }
+    .grid-item .boton:hover i{
+        transform: scale(1);
+    }
+    .grid-item .boton span{
+        transform: translateX(-15%);
+    }
+    .grid-item .boton:hover span{
+        transform: translateX(0)
+    }
+    .contact-content{
+        padding: 25px 50px;
+    }
+    .contact-content .form{
+        width: 50%;
+    }
+
+    .form .checkbox-test{
+        width: max-content;
+        gap: 10px;
+    }
+    .form .button input:hover{
+        background-color: var(--dark-color);
+    }
+}
+
+/* ========= Media queries (min-width: 1200px) ========= */
+@media (min-width: 1200px) {
+
+    .about .about-box {
         gap: 2.5rem;
     }
-    .about .about-box .box{
+
+    .about .about-box .box {
         text-align: left;
     }
-    .about .about-box .box h2{
+
+    .about .about-box .box h2 {
         font-size: 1.5rem;
     }
-    .about .about-box .box p{
+
+    .about .about-box .box p {
         font-size: 1.1rem;
     }
-    .about .about-box .box .read-more{
+
+    .about .about-box .box .read-more {
         margin: 40px 0;
+    }
+
+    /* LO QUE OFRECEMOS */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 3rem;
+    }
+    /* CONTACTO */
+    .contact-box{
+        padding: 25px 200px;
+    }
+    .contact-content{
+        padding: unset;
     }
 }
