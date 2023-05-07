@@ -20,7 +20,8 @@ class CreateAdminsTable extends Migration
             $table->string('apellido', 100);
             $table->char('telefono', 20);
             $table->string('direccion', 100);
-            $table->foreignId('user_id')->constrained('users');
+            $table->unsignedBigInteger('user_id')->unique();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

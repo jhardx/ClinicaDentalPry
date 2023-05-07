@@ -2,11 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\Admin;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
-class AdminFactory extends Factory
+use App\Models\User;
+class OdontologoFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -23,6 +21,5 @@ class AdminFactory extends Factory
             'direccion' => $this->faker->address(),
             'user_id' =>User::inRandomOrder()->first()->id,
         ];
-        
     }
 }
