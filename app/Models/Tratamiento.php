@@ -13,4 +13,10 @@ class Tratamiento extends Model
     {
         return $this->hasMany(Historial_Tratamiento::class);
     }
+
+    public function citas()
+    {
+        return $this->hasMany(Cita::class);
+    }
+
 }

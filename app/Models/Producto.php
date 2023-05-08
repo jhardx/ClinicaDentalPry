@@ -9,13 +9,10 @@ class Producto extends Model
 {
     use HasFactory;
 
-    public function compras()
+    public function proveedor()
     {
-        return $this->hasMany(Compra::class);
+        return $this->belongsTo(Proveedor::class);
     }
 
-    public function ventas()
-    {
-        return $this->hasMany(Venta::class);
-    }
+
 }

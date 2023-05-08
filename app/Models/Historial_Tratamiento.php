@@ -23,4 +23,10 @@ class Historial_Tratamiento extends Model
     {
         return $this->belongsTo(Comprobante::class);
     }
+
+    public function paciente()
+    {
+        return $this->belongsTo(paciente::class);
+    }
+
 }

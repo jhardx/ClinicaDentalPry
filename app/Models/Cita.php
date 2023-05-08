@@ -10,8 +10,21 @@ class Cita extends Model
 {
     use HasFactory;
 
+    
+    // relacion uno a muchos(inverso)
+    public function agenda(){
+        return $this->belongsTo('App\Models\Agenda');
+    }
+
+    // relacion uno a muchos(inverso)
     public function paciente(): BelongsTo
     {
         return $this->belongsTo(Paciente::class);
     }
+
+     // relacion uno a muchos(inverso)
+     public function tratamiento(): BelongsTo
+     {
+         return $this->belongsTo(Tratamiento::class);
+     }
 }

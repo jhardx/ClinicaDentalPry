@@ -15,9 +15,16 @@ class CreateHistorialTratamientosTable extends Migration
     {
         Schema::create('historial_tratamientos', function (Blueprint $table) {
             $table->id('id');
-            $table->foreignId('id_tratamiento')->constrained('tratamientos');
-            $table->foreignId('id_historial_medicos')->constrained('historial_medicos');
-            $table->foreignId('id_comprobante')->constrained('comprobantes');
+
+            $table->unsignedBigInteger('paciente_id');
+            $table->foreign('paciente_id')->references('id')->on('pacientes');
+           
+            $table->unsignedBigInteger('tratamiento_id');
+            $table->foreign('tratamiento_id')->references('id')->on('tratamientos');
+      
+            $table->unsignedBigInteger('comprobante_id')->unique();
+            $table->foreign('comprobante_id')->references('id')->on('comprobantes');
+            
             $table->timestamps();
         });
     }

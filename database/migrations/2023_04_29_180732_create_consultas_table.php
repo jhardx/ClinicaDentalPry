@@ -15,13 +15,17 @@ class CreateConsultasTable extends Migration
     {
         Schema::create('consultas', function (Blueprint $table) {
             $table->id('id');
-            $table->timestamp('fecha');
+            $table->timestamp('fecha_consulta');
             $table->time('hora', $precision = 0);
-            $table->char('duracion', 10);
+            $table->string('descripcion', 200);
             $table->float('precio', 8, 2);
-            $table->foreignId('id_odontologo')->constrained('odontologos');
-            $table->foreignId('id_paciente')->constrained('pacientes');
-            $table->foreignId('id_comprobante')->constrained('comprobantes');
+
+            $table->unsignedBigInteger('paciente_id');
+            $table->foreign('paciente_id')->references('id')->on('pacientes');
+            
+            $table->unsignedBigInteger('comprobante_id')->unique();
+            $table->foreign('comprobante_id')->references('id')->on('comprobantes');
+      
             $table->timestamps();
         });
     }

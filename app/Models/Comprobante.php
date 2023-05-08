@@ -14,14 +14,9 @@ class Comprobante extends Model
         return $this->belongsTo(Tipo_Comprobante::class);
     }
 
-    public function ventas()
-    {
-        return $this->hasMany(Venta::class);
-    }
-
     public function consultas()
     {
-        return $this->hasMany(Consulta::class);
+        return $this->hasOne(Consulta::class);
     }
 
     public function historial_tratamientos()

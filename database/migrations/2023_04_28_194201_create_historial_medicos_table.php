@@ -19,7 +19,8 @@ class CreateHistorialMedicosTable extends Migration
             $table->char('talla', 15);
             $table->string('enfermedad', 200);
             $table->string('ciruguia', 200);
-            $table->foreignId('paciente_id')->constrained('pacientes');
+            $table->unsignedBigInteger('paciente_id')->unique();
+            $table->foreign('paciente_id')->references('id')->on('pacientes');
             $table->timestamps();
         });
     }

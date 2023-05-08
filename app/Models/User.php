@@ -41,4 +41,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function admin(){
+        return $this->hasOne('App\Models\Admin');
+    }
+
+    public function odontologo(){
+        return $this->hasOne('App\Models\Odontologo');
+    }
+
+    public function paciente(){
+        return $this->hasOne('App\Models\Paciente');
+    }
 }

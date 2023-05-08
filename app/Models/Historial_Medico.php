@@ -15,8 +15,4 @@ class Historial_Medico extends Model
         return $this->belongsTo(Paciente::class);
     }
 
-    public function historial_tratamientos()
-    {
-        return $this->hasMany(Historial_Tratamiento::class);
-    }
 }

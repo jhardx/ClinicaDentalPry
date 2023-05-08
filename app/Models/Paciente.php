@@ -11,12 +11,12 @@ class Paciente extends Model
 {
     use HasFactory;
 
-    public function user(): HasOne
+    public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo('App\Models\User');
     }
 
-    public function citas(): HasMany
+    public function citas()
     {
         return $this->hasMany(Cita::class);
     }
@@ -30,4 +30,10 @@ class Paciente extends Model
     {
         return $this->hasMany(Consulta::class);
     }
+
+    public function historial_tratamientos()
+    {
+        return $this->hasMany(Historial_Tratamiento::class);
+    }
+
 }

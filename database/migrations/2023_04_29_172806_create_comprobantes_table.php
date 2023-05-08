@@ -17,7 +17,9 @@ class CreateComprobantesTable extends Migration
             $table->id('id');
             $table->date('fecha');
             $table->float('total', 8, 2);
-            $table->foreignId('id_tipo_comprobante')->constrained('tipo_comprobantes');
+            $table->unsignedBigInteger('tipo_comprobante_id');
+            $table->foreign('tipo_comprobante_id')->references('id')->on('tipo_comprobantes');
+           
             $table->timestamps();
         });
     }
