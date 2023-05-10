@@ -16,7 +16,8 @@ class CreateAgendasTable extends Migration
         Schema::create('agendas', function (Blueprint $table) {
             $table->id('id');
             $table->string('estado', 20);
-            $table->unsignedBigInteger('odontologo_id')->unique();
+             //quitado unique
+            $table->unsignedBigInteger('odontologo_id');
             $table->foreign('odontologo_id')->references('id')->on('odontologos');
             $table->timestamps();
         });

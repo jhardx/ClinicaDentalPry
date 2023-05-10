@@ -13,7 +13,7 @@ class CreateHistorialTratamientosTable extends Migration
      */
     public function up()
     {
-        Schema::create('historial_tratamientos', function (Blueprint $table) {
+        Schema::create('historial__tratamientos', function (Blueprint $table) {
             $table->id('id');
 
             $table->unsignedBigInteger('paciente_id');
@@ -22,7 +22,8 @@ class CreateHistorialTratamientosTable extends Migration
             $table->unsignedBigInteger('tratamiento_id');
             $table->foreign('tratamiento_id')->references('id')->on('tratamientos');
       
-            $table->unsignedBigInteger('comprobante_id')->unique();
+               //quitado unique
+            $table->unsignedBigInteger('comprobante_id');
             $table->foreign('comprobante_id')->references('id')->on('comprobantes');
             
             $table->timestamps();

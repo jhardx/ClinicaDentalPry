@@ -13,13 +13,14 @@ class CreateHistorialMedicosTable extends Migration
      */
     public function up()
     {
-        Schema::create('historial_medicos', function (Blueprint $table) {
+        Schema::create('historial__medicos', function (Blueprint $table) {
             $table->id('id');
             $table->char('peso', 15);
             $table->char('talla', 15);
-            $table->string('enfermedad', 200);
-            $table->string('ciruguia', 200);
-            $table->unsignedBigInteger('paciente_id')->unique();
+            $table->string('enfermedad', 400);
+            $table->string('cirugia', 400);
+              //quitado unique
+            $table->unsignedBigInteger('paciente_id');
             $table->foreign('paciente_id')->references('id')->on('pacientes');
             $table->timestamps();
         });

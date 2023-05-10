@@ -20,7 +20,8 @@ class CreateOdontologosTable extends Migration
             $table->string('apellido', 100);
             $table->char('telefono', 20);
             $table->string('direccion', 100);
-            $table->unsignedBigInteger('user_id')->unique();
+             //quitado unique
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Odontologo;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class Tipo_ComprobanteFactory extends Factory
+class AgendaFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +15,8 @@ class Tipo_ComprobanteFactory extends Factory
     public function definition()
     {
         return [
-            'tipo_comprobante' => $this->faker->randomElement(['factura','boleta']),
+            'estado' => $this->faker->randomElement(['en proceso','completado']),
+            'odontologo_id'=>Odontologo::inRandomOrder()->first()->id,
         ];
     }
 }

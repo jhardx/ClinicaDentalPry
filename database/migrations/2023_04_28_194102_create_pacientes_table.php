@@ -26,7 +26,8 @@ class CreatePacientesTable extends Migration
             $table->date('fecha_naci');
             $table->char('estado_civil', 20);
             $table->timestamp('fecha_registro')->nullable();
-            $table->unsignedBigInteger('user_id')->unique();
+             //quitado unique
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

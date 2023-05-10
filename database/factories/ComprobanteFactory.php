@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Tipo_Comprobante;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ComprobanteFactory extends Factory
@@ -17,7 +18,7 @@ class ComprobanteFactory extends Factory
         return [
             'fecha' => $this->faker->date(),
             'total' => $this->faker->randomElement(['400', '500', '600']),
-            'id_tipo_comprobante' =>Tipo_Comprobante::inRandomOrder()->first()->id,
+            'tipo_comprobante_id' =>Tipo_Comprobante::inRandomOrder()->first()->id,
         ];
     }
 }

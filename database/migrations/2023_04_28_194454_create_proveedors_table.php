@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTipoComprobantesTable extends Migration
+class CreateProveedorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateTipoComprobantesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_comprobantes', function (Blueprint $table) {
+        Schema::create('proveedors', function (Blueprint $table) {
             $table->id('id');
-            $table->string('tipo_comprobante', 100);
+            $table->string('nombre', 70);
+            $table->string('direccion', 200);
+            $table->char('contacto', 20);
             $table->timestamps();
         });
     }
@@ -27,7 +29,6 @@ class CreateTipoComprobantesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_comprobantes');
-        
+        Schema::dropIfExists('proveedors');
     }
 }

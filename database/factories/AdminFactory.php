@@ -1,10 +1,13 @@
 <?php
 
 namespace Database\Factories;
+use \Illuminate\Database\Eloquent\Factories\Factory;
 
-use App\Models\Admin;
+
+// use Faker\Generator as Faker;
+use Faker\Provider\es_PE\Person as Faker;
+
 use App\Models\User;
-use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AdminFactory extends Factory
 {
@@ -23,6 +26,5 @@ class AdminFactory extends Factory
             'direccion' => $this->faker->address(),
             'user_id' =>User::inRandomOrder()->first()->id,
         ];
-        
     }
 }

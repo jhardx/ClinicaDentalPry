@@ -23,7 +23,8 @@ class CreateConsultasTable extends Migration
             $table->unsignedBigInteger('paciente_id');
             $table->foreign('paciente_id')->references('id')->on('pacientes');
             
-            $table->unsignedBigInteger('comprobante_id')->unique();
+            // quitando unique
+            $table->unsignedBigInteger('comprobante_id');
             $table->foreign('comprobante_id')->references('id')->on('comprobantes');
       
             $table->timestamps();
