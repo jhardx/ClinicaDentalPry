@@ -1,14 +1,6 @@
 @import url('./main.css');
 
 /* ============ About section ============ */
-.about h1 {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    color: var(--color-secundario);
-    margin-bottom: 25px;
-}
 .about .about-box{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
