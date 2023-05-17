@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OdontologoController;
 // use App\Http\Controllers\UsuarioController;
 // use App\Http\Controllers\CitaController;
 // use App\Http\Controllers\CompraController;
@@ -31,3 +32,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('web.index');
 
+
+Route::get('/app/doctor', [OdontologoController::class, 'index']);
+Route::get('/app/doctor/pacientes', [OdontologoController::class, 'pacientes']);

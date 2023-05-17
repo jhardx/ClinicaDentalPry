@@ -16,4 +16,10 @@ return [
     'important'                     => 'Important',
     'warning'                       => 'Warning',
     'information'                   => 'Information',
+    //doctor
+    'doctor-pacientes'              => 'Pacientes',
+
+    'doctor-citas'              => 'Citas',
+
+
 ];
