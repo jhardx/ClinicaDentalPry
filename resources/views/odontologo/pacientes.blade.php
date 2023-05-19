@@ -5,43 +5,45 @@
 @section('content_header')
     <h1>PACIENTES</h1>
 @stop
+@section('plugins.Datatables', true)
 
 @section('content')
     <section class="content">
 
         <!-- Default box -->
         <div class="card">
+
+
+
             <div class="card-header">
-                <form class="form-horizontal">
-                    <div class="form-group row">
-
-
-
-
-
-                        <input class="col-sm-3 form-control" type="search" name="texto" placeholder="Digitar"
-                            aria-label="Digitar">
-                        <button class="col-sm-2 btn btn-info">Buscar</button>
-
-
-                    </div>
-                </form>
-
-
-
+                <div class="d-grid gap-2 col-6 mx-auto mt-lg-1 mb-lg-1">
+                    <a class="btn btn-success" href="{{ url('/app/paciente/new') }}">Registrar Paciente</a>
+                </div>
             </div>
-            @if (Session::has('message'))
-                <p class="alert {{ Session::get('alert-class', 'alert-success') }}">{{ Session::get('message') }}</p>
-            @endif
-            <!-- /.card-header -->
+
+            <form class="form-horizontal">
+
+                <div class="row mb-3 mt-lg-2">
+                    <div class="col-sm-10">
+                        <input class="col-sm-10 ml-lg-3 form-control" type="search" name="texto"
+                            placeholder="Buscar paciente" aria-label="Digitar">
+                    </div>
+                    <button class="col-sm-1 btn btn-info">Buscar</button>
+                </div>
+            </form>
+
             <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+
+                <table id="tabla-paciente" class="table table-bordered table-striped">
                     <thead>
                         <tr>
 
                             <th>Nombre</th>
+                            <th>Apellido P.</th>
+                            <th>Apellido M.</th>
                             <th>Edad</th>
-                            {{-- <th>Historia</th> --}}
+                            <th>Citas</th>
+                            <th>Historia Clínica</th>
 
 
                         </tr>
@@ -64,6 +66,25 @@
     {{-- </div> --}}
 @stop
 
+
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+@stop
+@section('js')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <script>
+        $('#tabla-paciente').DataTable({
+            language: {
+                "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+            },
+            "searching": false
+        });
+    </script>
+
 @stop

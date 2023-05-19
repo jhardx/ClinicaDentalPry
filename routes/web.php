@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CitaController;
+use App\Http\Controllers\HistorialMedicoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OdontologoController;
 // use App\Http\Controllers\UsuarioController;
@@ -31,7 +33,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('web.index');
+// Route::get('/app', [HomeController::class, 'index'])->name('web.index');
 
 
 Route::get('/app/doctor', [OdontologoController::class, 'index']);
-Route::get('/app/doctor/pacientes', [OdontologoController::class, 'pacientes']);
+
+
+Route::get('/app/pacientes', [PacienteController::class, 'index']);
+Route::get('/app/paciente/new', [PacienteController::class, 'newPaciente']);
+
+
+Route::get('/app/citas', [CitaController::class, 'index']);
+Route::get('/app/cita/new', [CitaController::class, 'newCita']);
+Route::get('/app/cita/edit/{id}', [CitaController::class, 'editCita']);
+Route::get('/app/cita/delete', [CitaController::class, 'getCita']);
+
+
+Route::get('/app/historia-clinica/get/{id}', [HistorialMedicoController::class, 'getCita']);
+Route::get('/app/historia-clinica/edit/{id}', [HistorialMedicoController::class, 'editCita']);
+
+
+
+
+// Route::get('/app/doctor/paciente/new', [OdontologoController::class, 'newPaciente']); 

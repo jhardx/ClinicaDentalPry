@@ -17,9 +17,9 @@ return [
     'warning'                       => 'Warning',
     'information'                   => 'Information',
     //doctor
-    'doctor-pacientes'              => 'Pacientes',
+    'pacientes'              => 'Pacientes',
 
-    'doctor-citas'              => 'Citas',
+    'citas'              => 'Citas',
 
 
 ];

@@ -16,9 +16,12 @@ class OdontologoController extends Controller
     {
         return view('odontologo.index');
     }
-
     public function pacientes()
     {
         return view('odontologo.pacientes');
+    }
+    public function newPaciente()
+    {
+        return view('odontologo.new-paciente');
     }
 }
