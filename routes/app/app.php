@@ -15,12 +15,35 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\TipoComprobanteController;
 use App\Http\Controllers\TratamientoController;
-use App\Http\Controllers\TwoFactorController;
 use App\Http\Controllers\VentasController;
 use Illuminate\Support\Facades\Route;
 
 // Rutas de administradores
+
 Route::resource('app/administradores', AdminController::class)->names('administradores');
+
+// Rutas Paciente
+Route::resource('app/administradores/crearPaciente', AdminController::class)->only(['crearPaciente']);
+Route::resource('app/administradores/editarPaciente/{id}', AdminController::class)->only(['editarPaciente']);
+
+
+// Rutas Odontologo
+Route::resource('app/administradores/crearOdontologo', AdminController::class)->only(['crearOdont']);
+Route::resource('app/administradores/editarOdontologo/{id}', AdminController::class)->only(['editarOdont']);
+Route::resource('app/administradores/eliminarOdontologo/{id}', AdminController::class)->only(['eliminarOdont']);
+
+
+// Rutas Tratamiento
+Route::resource('app/administradores/crearTratamiento', AdminController::class)->only(['crearTratamiento']);
+Route::resource('app/administradores/editarTratamiento/{id}', AdminController::class)->only(['editarTratamiento']);
+Route::resource('app/administradores/eliminarTratamiento/{id}', AdminController::class)->only(['eliminarTratamiento']);
+
+// Rutas Inventario
+
+Route::resource('app/administradores/crearProducto', AdminController::class)->only(['crearProducto']);
+Route::resource('app/administradores/editarProducto/{id}', AdminController::class)->only(['editarProducto']);
+Route::resource('app/administradores/eliminarProducto/{id}', AdminController::class)->only(['eliminarProducto']);
+
 
 // Rutas de autenticación
 Route::resource('app/auth', AuthController::class)->names('auth');

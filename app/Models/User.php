@@ -18,9 +18,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
         'email',
-        'password',
+        'clave',
+        'rol',
     ];
 
     /**
@@ -53,4 +53,6 @@ class User extends Authenticatable
     public function paciente(){
         return $this->hasOne('App\Models\Paciente');
     }
+
+
 }

@@ -8,6 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Odontologo extends Model
 {
+    protected $fillable = [
+        'dni',
+        'nombre',
+        'apellido',
+        'telefono',
+        'direccion',
+        'user_id',
+    ];
     use HasFactory;
 
     public function user()

@@ -15,7 +15,7 @@ class CreateOdontologosTable extends Migration
     {
         Schema::create('odontologos', function (Blueprint $table) {
             $table->id('id');
-            $table->char('dni', 15);
+            $table->char('dni', 8);
             $table->string('nombre', 100);
             $table->string('apellido', 100);
             $table->char('telefono', 20);
